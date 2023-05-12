@@ -4,3 +4,32 @@
 
 ### and this is level 3
 
+Emphasize text with \*! Wrap text in 1 for *italics* and 2 for **bold**.
+
+Backticks (\`) will let you show code inline `const root = createRoot(document.getElementById('root'));` <- like this!
+
+Use three of them (\`\`\`) to enclose a whole block like below
+
+```
+<React.StrictMode>
+    <App />
+</React.StrictMode>
+```
+
+But what if it's not code but a quote? use \> at the start of the line!
+
+> like this!
+
+Want lists?
+
+- do
+    - you
+        - want
+            - ordered?
+
+1. or
+1. ordered?
+
+Follow this [link](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) for more markdown syntax!
+
+this project was made by: ![github octocat logo](./github_logo.svg) [Kralken](https://github.com/Kralken)
