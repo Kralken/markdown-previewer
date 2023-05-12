@@ -1,12 +1,15 @@
 {
   "name": "markdown-previewer",
   "version": "1.0.0",
+  "homepage": "https://kralken.github.io/markdown-previewer",
   "description": "react minimal boilerplate template",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server .",
-    "build": "webpack ."
+    "build": "webpack .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
@@ -27,6 +30,7 @@
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
     "dompurify": "^3.0.3",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.1",
     "raw-loader": "^4.0.2",
     "style-loader": "^3.3.2",
