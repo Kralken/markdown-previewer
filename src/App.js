@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import TextInput from './TextInput.js';
 import MarkDownPreview from './MarkDownView.js';
+import Footer from './Footer.js';
 import './styles.css';
 import initialText from './InitialText.txt';
 import Header from './HeaderBar.js';
@@ -35,6 +36,7 @@ export default function App() {
                 <TextInput
                     text={text}
                     onChange={handleChange}
+                    status={status}
                 >
                     <Header
                         maximize={handleMaximizeEditor}
@@ -49,6 +51,7 @@ export default function App() {
             {(status === "normal" || status === "preview") &&
                 <MarkDownPreview
                     text={text}
+                    status={status}
                 >
                     <Header
                         maximize={handleMaximizePreview}
@@ -59,7 +62,8 @@ export default function App() {
                     </Header>
                 </MarkDownPreview>
             }
-
+            
+            <Footer />
         </React.StrictMode>
     );
 }
