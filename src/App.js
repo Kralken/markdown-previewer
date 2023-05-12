@@ -1,7 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
+import TextInput from './TextInput.js';
+import MarkDownPreview from './MarkDownView.js';
+import './styles.css';
+import initialText from './InitialText.txt';
 
 export default function App() {
+
+    // inital text is pulled form the InitialText.txt file in src
+    // define the state for the text input
+    const [text, setText] = useState(initialText);
+
+    const handleChange = (e) => {
+        setText(e.target.value);
+    }
+
     return (
-        <h1>Welcome to my markdown previewer page!</h1>
-    )
+        <React.StrictMode>
+            <TextInput
+                text={text}
+                onChange={handleChange}
+            />
+            <MarkDownPreview
+                text={text}
+            />
+        </React.StrictMode>
+    );
 }
